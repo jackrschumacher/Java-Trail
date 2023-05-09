@@ -1,8 +1,8 @@
 class Main{
 	public static void main(String [] args){
-		String version = "0.0.1";
+		String version = "0.0.1 Alpha";
 		Intro game = new Intro();
-		game.Story(version);
+		game.Description(version);
 		
 	}
 }
