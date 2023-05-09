@@ -1,7 +1,8 @@
 class Main{
 	public static void main(String [] args){
-		Intro test = new Intro();
-		test.Story();
+		String version = "0.0.1";
+		Intro game = new Intro();
+		game.Story(version);
 		
 	}
 }
