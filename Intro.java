@@ -17,6 +17,7 @@ public class Intro{
 		System.out.println("You can decide where you would like to begin your journey. Enter where you would like to start on the next line:");
 		startChoice = in.nextLine();
 		System.out.println("You have decided to start at:"+ startChoice);
+		System.out.println("You will end in Ventura, California");
 		return startChoice;
 		
 	}
