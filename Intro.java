@@ -26,7 +26,20 @@ public class Intro{
 		
 	}
 	public String buySupplies(){
-		System.out.println("");
+		int moneyAmount = 1500;
+		int flourAmount = 0;
+		int riceAmount = 0;
+		int waterAmount = 0;
+		int hayAmount = 0;
+		System.out.println("You will now buy supplies for your journey");
+		System.out.println("This is a list of pices for your goods for your refrence:")
+		System.out.println("Flour: $15/pound");
+		System.out.println("Rice: $10/pound");
+		System.out.println("Water: $1/pound");
+		System.out.println("Hay: $3/pound");
+
+
+		System.out.println("How much would Flour would you like to buy?");
 		return "";
 	}
 	
