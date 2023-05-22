@@ -11,7 +11,7 @@ public class Intro{
 		System.out.println("Version "+ version);
 		startChoice = Story();
 		moneyAmount = buySupplies();
-		Journey.Travel();
+		Journey.Travel(startChoice, moneyAmount);
 		return "";
 	}
 	public String Story(){
@@ -43,19 +43,15 @@ public class Intro{
 
 		System.out.println("How much Flour would you like to buy?");
 		flourAmount = in.nextInt();
-		moneyAmount -= flourAmount * 15;
+		moneyAmount -= (flourAmount * 15);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Rice would you like to buy?");
 		riceAmount = in.nextInt();
-		moneyAmount -= riceAmount * 10;
+		moneyAmount -= (riceAmount * 10);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Water would you like to buy?");
 		waterAmount = in.nextInt();
-		moneyAmount -= waterAmount * 1;
-		System.out.println("You have "+ moneyAmount+ " dollars remaining");
-		System.out.println("How much Water would you like to buy?");
-		riceAmount = in.nextInt();
-		moneyAmount -= waterAmount;
+		moneyAmount -= (waterAmount * 1);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Hay would you like to buy?");
 		hayAmount = in.nextInt();
