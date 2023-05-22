@@ -3,13 +3,15 @@ public class Intro{
 	Scanner in = new Scanner(System.in);
 	public String Description(String version){
 		String startChoice;
+		int moneyAmount = 0;
 		System.out.println("Welcome to Java Trail");
 		System.out.println("===============================");
 		System.out.println("A Java- based Oregon Trail Game");
 		System.out.println("Developed By Jack Schumacher in 2023");
 		System.out.println("Version "+ version);
 		startChoice = Story();
-		buySupplies();
+		moneyAmount = buySupplies();
+		Journey.Travel();
 		return "";
 	}
 	public String Story(){
@@ -61,7 +63,7 @@ public class Intro{
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		return moneyAmount;
 
-
+	
 		
 	}
 	
