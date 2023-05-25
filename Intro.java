@@ -16,7 +16,6 @@ public class Intro{
 	}
 	public String Story(){
 		String startChoice;
-		String name;
 		System.out.println("You are about to embark on a journey westward.");
 		System.out.println("You can decide where you would like to begin your journey. Enter where you would like to start on the next line:");
 		startChoice = in.next();
