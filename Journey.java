@@ -21,15 +21,36 @@ public class Journey{
 				System.out.println("Enter F for Ford and C for Cross");
 				String cross = in.next();
 				if(cross == "F"){
-					
+					System.out.println("You are able to ford the river with no issues");
 				}
+				else{
+					int randomCross = (int)(Math.random() * 2);
+					if(randomCross == 1){
+						System.out.println("You were able to sucessfully cross the river");
+					}
+					else if(randomCross == 2){
+						System.out.println("Unfortunatley, you were not able to cross the river sucessfully");
+						System.out.println("Your food amount has decreased");
+					}
+					}
+				}
+			if(randomEvent == 2){
+				System.out.println("You have encountered bandits");
+				System.out.println("They steal some of your money");
+				int randomMoney = (int)(Math.random() * 100);
+				moneyAmount -= randomMoney;
+				System.out.println("You lose $" + randomMoney);
+				System.out.println("You have $"+ moneyAmount + "remaining");
+			}
+			if(random)
+
 			
 			}
 			
 			
 			
 			
-		}
+		
 		return "";
 	}
 	
