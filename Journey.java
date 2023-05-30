@@ -7,6 +7,7 @@ public class Journey{
 		System.out.println("You will now begin your journey from " + startChoice + " to Ventura, California");
 		int distanceToTravel = (int)(Math.random()* 10000);
 		int distanceRemaining = 0;
+		int foodUsedPerDay = 0;
 		
 		System.out.println("You have " + distanceToTravel+ "miles to travel");
 		System.out.println("You will travel a different distance each day. \nAlong your journey, you will encounter many obstacles to your journey, such as rivers, natural disasters, animals and more. \nAddionally, you will encounter situations that might improve your journey, such as towns or trading posts, or other travelers. \nGood Luck!");
@@ -15,7 +16,12 @@ public class Journey{
 			distanceRemaining = distanceToTravel - distance;
 			System.out.println("You have traveled:"+ distance+ " So far");
 			System.out.println("You have"+ distanceRemaining+ "miles left to travel");
+			foodUsedPerDay = (int)(Math.random() * 3);
 			int randomEvent = (int)(Math.random() * 10);
+
+			System.out.println("You have eaten "+ foodUsedPerDay+ " pounds of food Today");
+
+			
 			if(randomEvent == 1){
 				System.out.println("You have encountered a river. You must decide to try to cross the river in a raft or dirve across");
 				System.out.println("Enter F for Ford and C for Cross");
@@ -42,7 +48,13 @@ public class Journey{
 				System.out.println("You lose $" + randomMoney);
 				System.out.println("You have $"+ moneyAmount + "remaining");
 			}
-			if(random)
+			if(randomEvent == 3){
+				System.out.println("Unfortunatley, you lose one of you horses");
+				System.out.println("You are able to find another horse from a passerby on the trail");
+				int randomHorseMoney = (int)(Math.random() *100);
+				moneyAmount -= randomHorseMoney;
+				System.out.println("You have $" + moneyAmount + " remaining");
+			}
 
 			
 			}

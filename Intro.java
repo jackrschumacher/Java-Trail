@@ -32,10 +32,10 @@ public class Intro{
 		int riceAmount = 0;
 		int waterAmount = 0;
 		int hayAmount = 0;
+		int totalFoodAmount = 0;
 		System.out.println("You will now buy supplies for your journey");
 		System.out.println("This is a list of pices for your goods for your refrence:");
 		System.out.println("Flour: $15/pound");
-		System.out.println("Rice: $10/pound");
 		System.out.println("Water: $1/pound");
 		System.out.println("Hay: $3/pound");
 
@@ -46,7 +46,7 @@ public class Intro{
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Rice would you like to buy?");
 		riceAmount = in.nextInt();
-		moneyAmount -= (riceAmount * 10);
+		moneyAmount -= (riceAmount * 15);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Water would you like to buy?");
 		waterAmount = in.nextInt();
@@ -55,7 +55,9 @@ public class Intro{
 		System.out.println("How much Hay would you like to buy?");
 		hayAmount = in.nextInt();
 		moneyAmount -= hayAmount;
+		moneyAmount -= (hayAmount * 5);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
+		totalFoodAmount = flourAmount + riceAmount;
 		return moneyAmount;
 
 	
