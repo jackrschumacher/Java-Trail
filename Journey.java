@@ -8,16 +8,21 @@ public class Journey{
 		int distanceToTravel = (int)(Math.random()* 10000);
 		int distanceRemaining = 0;
 		int foodUsedPerDay = 0;
+		int health = 100;
 		
 		System.out.println("You have " + distanceToTravel+ "miles to travel");
 		System.out.println("You will travel a different distance each day. \nAlong your journey, you will encounter many obstacles to your journey, such as rivers, natural disasters, animals and more. \nAddionally, you will encounter situations that might improve your journey, such as towns or trading posts, or other travelers. \nGood Luck!");
 		
 		for(int distance = 0; distance <= distanceToTravel; distance = distance + (int)(Math.random()*10)){
 			distanceRemaining = distanceToTravel - distance;
+			
+			System.out.println("You have "+ health + "remaining");
 			System.out.println("You have traveled:"+ distance+ " So far");
 			System.out.println("You have"+ distanceRemaining+ "miles left to travel");
+			
 			foodUsedPerDay = (int)(Math.random() * 3);
 			int randomEvent = (int)(Math.random() * 10);
+			
 
 			System.out.println("You have eaten "+ foodUsedPerDay+ " pounds of food Today");
 
@@ -54,6 +59,15 @@ public class Journey{
 				int randomHorseMoney = (int)(Math.random() *100);
 				moneyAmount -= randomHorseMoney;
 				System.out.println("You have $" + moneyAmount + " remaining");
+			}
+			if(randomEvent == 4){
+				System.out.println("While traveling the trail you encounter severley cold weather");
+				System.out.println("Since you are not equiped to handle cold weather, you lose some health");
+				int healthLost = (int)(Math.random() * 5);
+				System.out.println("You Lose "+ healthLost + "health");
+			}
+			if(randomEvent == 5){
+				System.out.println("Test");
 			}
 
 			

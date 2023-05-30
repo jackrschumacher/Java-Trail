@@ -39,14 +39,14 @@ public class Intro{
 		System.out.println("Water: $1/pound");
 		System.out.println("Hay: $3/pound");
 
-
+	
 		System.out.println("How much Flour would you like to buy?");
 		flourAmount = in.nextInt();
 		moneyAmount -= (flourAmount * 15);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Rice would you like to buy?");
 		riceAmount = in.nextInt();
-		moneyAmount -= (riceAmount * 15);
+		moneyAmount -= (riceAmount * 10);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
 		System.out.println("How much Water would you like to buy?");
 		waterAmount = in.nextInt();
