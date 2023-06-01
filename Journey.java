@@ -67,7 +67,7 @@ public class Journey{
 				System.out.println("You Lose "+ healthLost + "health");
 			}
 			if(randomEvent == 5){
-				System.out.println("Test");
+				System.out.println("You have the opprotunity to hunt and gain some food");
 			}
 
 			

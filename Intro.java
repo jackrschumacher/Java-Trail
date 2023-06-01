@@ -39,24 +39,46 @@ public class Intro{
 		System.out.println("Water: $1/pound");
 		System.out.println("Hay: $3/pound");
 
-	
+		
 		System.out.println("How much Flour would you like to buy?");
 		flourAmount = in.nextInt();
+		while((moneyAmount - (flourAmount * 15)) < 0){
+			System.out.println("This is invalid. please Try Again");
+			System.out.println("How much Flour would you like to buy?");
+			flourAmount = in.nextInt();
+		}
 		moneyAmount -= (flourAmount * 15);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
+		
 		System.out.println("How much Rice would you like to buy?");
 		riceAmount = in.nextInt();
-		moneyAmount -= (riceAmount * 10);
+		if((moneyAmount - (riceAmount * 10)) < 0){
+			System.out.println("This is invalid. please Try Again");
+		}
+		else{
+			moneyAmount -= (riceAmount * 10);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
+		}
+		
 		System.out.println("How much Water would you like to buy?");
 		waterAmount = in.nextInt();
+		if((moneyAmount - (waterAmount * 1)) < 0){
+			System.out.println("This is invalid. please Try Again");
+		}
+		else{
 		moneyAmount -= (waterAmount * 1);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
+		}
 		System.out.println("How much Hay would you like to buy?");
 		hayAmount = in.nextInt();
+		if((moneyAmount - (hayAmount * 15)) < 0){
+			System.out.println("This is invalid. please Try Again");
+		}
+		else{
 		moneyAmount -= hayAmount;
 		moneyAmount -= (hayAmount * 5);
 		System.out.println("You have "+ moneyAmount+ " dollars remaining");
+		}
 		totalFoodAmount = flourAmount + riceAmount;
 		return moneyAmount;
 
